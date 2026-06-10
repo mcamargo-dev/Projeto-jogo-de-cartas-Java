@@ -3,7 +3,7 @@ Jogo de cartas desenvolvido em Java como projeto acadêmico. O objetivo é aplic
 
 
 ## Hi there 👋
-<!--
+
 **camilafernanda2/camilafernanda2** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 Here are some ideas to get you started:
 - 🔭 I’m currently working on ...
