@@ -1,6 +1,8 @@
 package model;
+
 import java.util.ArrayList;
 import java.util.List;
+import enums.Faixa;
 
 public class Jogador implements Jogavel {
     private int id;
@@ -13,9 +15,16 @@ public class Jogador implements Jogavel {
     public Jogador(int id, String nickname) {
         this.id = id;
         this.nickname = nickname;
+        this.faixa = Faixa.BRANCA;
         this.decks = new ArrayList<>();
     }
-    @Override public void resetarEstado() {}
-    @Override public int getId() { return id; }
-    // Adicione getters e setters
+
+    @Override
+    public void resetarEstado() {}
+
+    @Override
+    public int getId() {
+        return id;
+    }
+
 }
