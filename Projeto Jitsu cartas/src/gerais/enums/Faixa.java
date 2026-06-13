@@ -1,2 +1,5 @@
 package enums;
-public enum Faixa { BRANCA, AMARELA, VERDE, AZUL, VERMELHA, PRETA }
+
+public enum Faixa {
+    BRANCA, AMARELA, LARANJA, VERDE, AZUL, VERMELHA, ROXA, MARROM, PRETA
+}
