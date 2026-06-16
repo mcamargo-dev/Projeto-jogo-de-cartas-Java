@@ -1,6 +1,7 @@
 package controller;
+import gerais.enums.Faixa;
 import model.Jogador;
-import repository.JogadorRepository;
+import gerais.repository.JogadorRepository;
 import java.util.List;
 
 public class JogadorController {

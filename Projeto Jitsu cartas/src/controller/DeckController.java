@@ -1,7 +1,8 @@
 package controller;
+import model.Carta;
 import model.Deck;
 import model.Jogador;
-import repository.DeckRepository;
+import gerais.repository.DeckRepository;
 import java.util.List;
 
 public class DeckController {

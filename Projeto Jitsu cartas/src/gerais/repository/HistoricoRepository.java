@@ -1,10 +1,10 @@
-package Repository;
+package gerais.repository;
 
-import Model.HistoricoPartida;
-import Model.Partida;
-import Model.Jogador;
-import Util.FileUtil;
-import Util.Constantes;
+import model.HistoricoPartida;
+import model.Partida;
+import model.Jogador;
+import util.FileUtil;
+import util.Constantes;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

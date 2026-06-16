@@ -1,4 +1,4 @@
-package repository;
+package gerais.repository;
 import model.Jogador;
 import java.util.ArrayList;
 import java.util.List;

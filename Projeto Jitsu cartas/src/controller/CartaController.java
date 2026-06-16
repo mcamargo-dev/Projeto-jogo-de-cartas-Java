@@ -1,8 +1,8 @@
-package Controller;
+package controller;
 
-import Model.Carta;
-import Repository.CartaRepository;
-import View.CartaView;
+import model.Carta;
+import gerais.repository.CartaRepository;
+import view.CartaView;
 
 public class CartaController {
     private CartaRepository repository;

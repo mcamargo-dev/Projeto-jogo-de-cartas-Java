@@ -1,5 +1,5 @@
-package Repository;
-import Model.Carta;
+package gerais.repository;
+import model.Carta;
 
 import java.util.ArrayList;
 import java.util.List;

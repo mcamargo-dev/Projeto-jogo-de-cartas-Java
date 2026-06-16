@@ -1,8 +1,8 @@
-package View;
+package view;
 
-import Controller.HistoricoController;
-import Model.HistoricoPartida;
-import Util.InputHelper;
+import controller.HistoricoController;
+import model.HistoricoPartida;
+import util.InputHelper;
 
 import java.util.List;
 

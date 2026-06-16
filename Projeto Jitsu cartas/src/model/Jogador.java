@@ -2,7 +2,8 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
-import enums.Faixa;
+import gerais.enums.Faixa;
+import gerais.interfaces.Jogavel;
 
 public class Jogador implements Jogavel {
     private int id;
@@ -23,8 +24,7 @@ public class Jogador implements Jogavel {
     public void resetarEstado() {}
 
     @Override
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
+    public String getNickname() { return nickname; }
 
 }

@@ -1,3 +1,7 @@
+package model;
+
+import gerais.interfaces.Jogavel;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;

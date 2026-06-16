@@ -1,10 +1,10 @@
-package View;
+package view;
 
-import Enum.Cor;
-import Enum.Elemento;
-import Model.Carta;
-import Model.CartaEspecial;
-import Model.CartaNormal;
+import gerais.enums.Cor;
+import gerais.enums.Elemento;
+import model.Carta;
+import model.CartaEspecial;
+import model.CartaNormal;
 
 import java.util.List;
 import java.util.Scanner;

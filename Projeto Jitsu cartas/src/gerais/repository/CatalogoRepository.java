@@ -1,6 +1,6 @@
-package Repository;
+package gerais.repository;
 
-import Model.CatalogoCartas;
+import model.CatalogoCartas;
 
 import java.util.ArrayList;
 import java.util.List;

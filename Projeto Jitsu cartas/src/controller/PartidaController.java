@@ -1,10 +1,10 @@
-package Controller;
+package controller;
 
-import Model.Partida;
-import Model.Jogador;
-import Model.Carta;
-import Model.HistoricoPartida;
-import enums.Elemento;
+import model.Partida;
+import model.Jogador;
+import model.Carta;
+import model.HistoricoPartida;
+import gerais.enums.Elemento;
 
 public class PartidaController {
 

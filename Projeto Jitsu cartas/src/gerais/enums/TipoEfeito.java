@@ -1,2 +1,2 @@
-package enums;
+package gerais.enums;
 public enum TipoEfeito { BLOQUEAR_ELEMENTO, INVERTER_ELEMENTOS, COMPRAR_CARTA, DUPLICAR_VALOR, IMUNIDADE_TEMPORARIA }

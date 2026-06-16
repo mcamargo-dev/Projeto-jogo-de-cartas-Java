@@ -1,10 +1,10 @@
-package Controller;
+package controller;
 
-import Model.Carta;
-import Model.CatalogoCartas;
-import Repository.CartaRepository;
-import Repository.CatalogoRepository;
-import View.CatalogoView;
+import model.Carta;
+import model.CatalogoCartas;
+import gerais.repository.CartaRepository;
+import gerais.repository.CatalogoRepository;
+import view.CatalogoView;
 
 public class CatalogoController {
 

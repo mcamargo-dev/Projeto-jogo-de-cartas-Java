@@ -1,6 +1,5 @@
-package Model;
+package model;
 
-import Model.Carta;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package Exceptions;
+package gerais.exceções;
 
 public class CartaInvalidaException extends Exception {
 

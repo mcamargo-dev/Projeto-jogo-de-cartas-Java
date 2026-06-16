@@ -1,7 +1,7 @@
-package Controller;
+package controller;
 
-import Model.HistoricoPartida;
-import Repository.HistoricoRepository;
+import model.HistoricoPartida;
+import gerais.repository.HistoricoRepository;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;

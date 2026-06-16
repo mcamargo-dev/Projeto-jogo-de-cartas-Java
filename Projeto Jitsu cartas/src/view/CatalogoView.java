@@ -1,7 +1,7 @@
-package View;
+package view;
 
-import Model.Carta;
-import Model.CatalogoCartas;
+import model.Carta;
+import model.CatalogoCartas;
 
 import java.util.List;
 import java.util.Scanner;

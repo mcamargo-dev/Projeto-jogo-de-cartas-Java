@@ -1,6 +1,6 @@
-package Model;
-import Enum.Cor;
-import Enum.Elemento;
+package model;
+import gerais.enums.Cor;
+import gerais.enums.Elemento;
 
 public class CartaEspecial extends Carta {
     private String descricaoEfeito;

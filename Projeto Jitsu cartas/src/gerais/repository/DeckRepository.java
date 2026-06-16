@@ -1,4 +1,4 @@
-package repository;
+package gerais.repository;
 import model.Deck;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,9 @@
-package View;
+package view;
 
-import Controller.PartidaController;
-import Model.Jogador;
-import Model.Carta;
-import Util.InputHelper;
+import controller.PartidaController;
+import model.Jogador;
+import model.Carta;
+import util.InputHelper;
 
 import java.util.List;
 
