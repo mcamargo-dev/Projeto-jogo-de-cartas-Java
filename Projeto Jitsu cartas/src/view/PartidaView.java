@@ -4,28 +4,28 @@ import controller.PartidaController;
 import model.Jogador;
 import model.Carta;
 import util.InputHelper;
-
 import java.util.List;
 
 public class PartidaView {
-
     private PartidaController controller;
 
     public PartidaView() {
         this.controller = new PartidaController();
     }
 
-    public void menuPartida() {
+    public void menuPrincipal() {
         int opcao;
         do {
-            System.out.println("\n--- MENU PARTIDA ---");
+            System.out.println("\n========== MENU PRINCIPAL ==========");
             System.out.println("1. Iniciar nova partida");
             System.out.println("2. Jogar rodada");
             System.out.println("3. Exibir estado da partida");
-            System.out.println("4. Exibir mesa");
+            System.out.println("4. Exibir cartas da mesa");
             System.out.println("5. Ver vencedor");
-            System.out.println("0. Encerrar partida");
-            opcao = InputHelper.lerInt("Escolha uma opcao: ");
+            System.out.println("0. Sair");
+            System.out.println("===================================");
+            
+            opcao = InputHelper.lerInt("Escolha: ");
 
             switch (opcao) {
                 case 1:
@@ -41,70 +41,62 @@ public class PartidaView {
                     if (controller.getPartidaAtual() != null) {
                         exibirMesa(controller.getPartidaAtual().getCartasMesa());
                     } else {
-                        mensagens("Nenhuma partida em andamento para exibir a mesa.");
+                        System.out.println(">>> Nenhuma partida em andamento.");
                     }
                     break;
                 case 5:
                     if (controller.getPartidaAtual() != null) {
                         exibirVencedor(controller.getPartidaAtual().getVencedor());
                     } else {
-                        mensagens("Nenhuma partida em andamento.");
+                        System.out.println(">>> Nenhuma partida em andamento.");
                     }
                     break;
                 case 0:
-                    mensagens("Saindo do menu de partida.");
+                    System.out.println(">>> Até logo!");
                     break;
                 default:
-                    mensagens("Opcao invalida.");
+                    System.out.println(">>> Opção inválida.");
             }
         } while (opcao != 0);
     }
 
-    public void exibirEstado() {
-        if (controller.getPartidaAtual() != null) {
-            System.out.println("\n--- ESTADO DA PARTIDA ---");
-            System.out.println("Partida ID: " + controller.getPartidaAtual().getId());
-            System.out.println("Jogador 1: " + controller.getPartidaAtual().getJogador1().getNickname());
-            System.out.println("Jogador 2: " + controller.getPartidaAtual().getJogador2().getNickname());
-            System.out.println("Rodada Atual: " + controller.getPartidaAtual().getRodadaAtual());
-            System.out.println("Pontos J1: " + controller.getPartidaAtual().getPontosJogador1());
-            System.out.println("Pontos J2: " + controller.getPartidaAtual().getPontosJogador2());
-            System.out.println("Deck J1: " + controller.getPartidaAtual().getDeckJogador1().getTamanho() + " cartas");
-            System.out.println("Deck J2: " + controller.getPartidaAtual().getDeckJogador2().getTamanho() + " cartas");
-            System.out.println("Inicio: " + controller.getPartidaAtual().getDataInicio());
-            System.out.println("Em Andamento: " + (controller.getPartidaAtual().isEmAndamento() ? "SIM" : "NÃO"));
-        } else {
-            mensagens("Nenhuma partida em andamento.");
-        }
-    }
-
-    public void exibirMesa(List<Carta> cartasMesa) {
-        if (cartasMesa == null || cartasMesa.isEmpty()) {
-            mensagens("A mesa esta vazia.");
+    private void exibirEstado() {
+        if (controller.getPartidaAtual() == null) {
+            System.out.println(">>> Nenhuma partida em andamento.");
             return;
         }
+        
+        var partida = controller.getPartidaAtual();
+        System.out.println("\n--- ESTADO DA PARTIDA ---");
+        System.out.println("Partida: " + partida.getId());
+        System.out.println("Jogador 1: " + partida.getJogador1().getNickname());
+        System.out.println("Jogador 2: " + partida.getJogador2().getNickname());
+        System.out.println("Rodada: " + partida.getRodadaAtual());
+        System.out.println("Placar: " + partida.getPontosJogador1() + " x " + partida.getPontosJogador2());
+        System.out.println("Cartas J1: " + partida.getDeckJogador1().getTamanho());
+        System.out.println("Cartas J2: " + partida.getDeckJogador2().getTamanho());
+        System.out.println("Status: " + (partida.isEmAndamento() ? "Em andamento" : "Finalizada"));
+    }
+
+    private void exibirMesa(List<Carta> cartas) {
+        if (cartas == null || cartas.isEmpty()) {
+            System.out.println(">>> A mesa está vazia.");
+            return;
+        }
+        
         System.out.println("\n--- CARTAS NA MESA ---");
-        for (Carta carta : cartasMesa) {
-            System.out.println(carta.toString());
+        for (Carta carta : cartas) {
+            System.out.println("  " + carta.toString());
         }
     }
 
-    public int lerJogada(Jogador jogador) {
-        System.out.println("\nTurno de: " + jogador.getNickname());
-        return InputHelper.lerInt("Digite o indice da carta que deseja jogar: ");
-    }
-
-    public void exibirVencedor(Jogador vencedor) {
-        System.out.println("\n==================================");
+    private void exibirVencedor(Jogador vencedor) {
+        System.out.println("\n=================================");
         if (vencedor != null) {
-            System.out.println("   VENCEDOR: " + vencedor.getNickname().toUpperCase() + "!");
+            System.out.println("  VENCEDOR: " + vencedor.getNickname().toUpperCase());
         } else {
-            System.out.println("   RESULTADO: EMPATE!");
+            System.out.println("  RESULTADO: EMPATE");
         }
-        System.out.println("==================================");
-    }
-
-    public void mensagens(String msg) {
-        System.out.println(">>> " + msg);
+        System.out.println("=================================");
     }
 }

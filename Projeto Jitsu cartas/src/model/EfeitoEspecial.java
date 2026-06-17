@@ -3,7 +3,6 @@ package model;
 import gerais.enums.TipoEfeito;
 
 public class EfeitoEspecial {
-
     private int id;
     private String nome;
     private String descricao;
@@ -17,15 +16,10 @@ public class EfeitoEspecial {
     }
 
     public void aplicar(Partida partida) {
-        // Implementação dinâmica das regras baseada no enum de efeito
-        // Exemplo: if(tipoEfeito == TipoEfeito.BLOQUEAR_ELEMENTO) { ... }
+        System.out.println("Aplicando efeito: " + nome);
     }
 
-    @Override
-    public String toString() {
-        return String.format("[ID: %d] %s (%s) - %s", id, nome, tipoEfeito, descricao);
-    }
-
+    // Getters e Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public String getNome() { return nome; }
@@ -35,4 +29,8 @@ public class EfeitoEspecial {
     public TipoEfeito getTipoEfeito() { return tipoEfeito; }
     public void setTipoEfeito(TipoEfeito tipoEfeito) { this.tipoEfeito = tipoEfeito; }
 
+    @Override
+    public String toString() {
+        return nome + " (" + tipoEfeito + ")";
+    }
 }
