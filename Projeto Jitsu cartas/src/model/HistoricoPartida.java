@@ -17,7 +17,6 @@ public class HistoricoPartida {
         this.dataRegistro = LocalDateTime.now();
     }
 
-    // Getters e Setters
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public Partida getPartida() { return partida; }
