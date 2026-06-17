@@ -1,13 +1,19 @@
 package gerais.enums;
 
 public enum Faixa {
-    BRANCA, AMARELA, LARANJA, VERDE, AZUL, VERMELHA, ROXA, MARROM, PRETA;
+    BRANCA,
+    AMARELA,
+    LARANJA,
+    VERDE,
+    AZUL,
+    ROXA,
+    MARROM,
+    PRETA;
 
     public Faixa proxima() {
-        int proximoOrdinal = this.ordinal() + 1;
-        if (proximoOrdinal < Faixa.values().length) {
-            return Faixa.values()[proximoOrdinal];
+        if (this.ordinal() < PRETA.ordinal()) {
+            return Faixa.values()[this.ordinal() + 1];
         }
-        return this; // Já está na faixa preta (máxima)
+        return this;
     }
 }

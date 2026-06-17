@@ -1,19 +1,8 @@
 package util;
 
 public class Constantes {
-
-    // Arquivos de persistência
-    public static String ARQUIVO_JOGADORES = "dados/jogadores.txt";
-    public static String ARQUIVO_DECKS = "dados/decks.txt";
-    public static String ARQUIVO_CARTAS = "dados/cartas.txt";
-    public static String ARQUIVO_PARTIDAS = "dados/partidas.txt";
-    public static String ARQUIVO_HISTORICO = "dados/historico.txt";
-    public static String ARQUIVO_LOG = "dados/log.txt";
-
-    // Impede instanciação
-    private Constantes() {
-        throw new UnsupportedOperationException(
-                "Classe utilitária não pode ser instanciada.");
-    }
-
+    public static final int CARTAS_POR_DECK = 20;
+    public static final int NUMERO_MINIMO_CARTA = 1;
+    public static final int NUMERO_MAXIMO_CARTA = 9;
+    public static final int FAIXA_XP_INICIAL = 100;
 }

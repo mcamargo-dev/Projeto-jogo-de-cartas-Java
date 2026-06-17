@@ -29,79 +29,34 @@ public class Jogador implements Jogavel {
         this.faixa = Faixa.BRANCA;
     }
 
+    public void incrementarVitorias() { this.vitorias++; }
+    public void incrementarDerrotas() { this.derrotas++; }
+
+    public void adicionarDeck(Deck deck) { this.decks.add(deck); }
+    public void removerDeck(Deck deck) { this.decks.remove(deck); }
+
+    // Getters e Setters
     @Override
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public String getNickname() { return nickname; }
+    public void setNickname(String nickname) { this.nickname = nickname; }
 
-    public String getNickname() {
-        return nickname;
-    }
+    public int getVitorias() { return vitorias; }
+    public void setVitorias(int vitorias) { this.vitorias = vitorias; }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
-    }
+    public int getDerrotas() { return derrotas; }
+    public void setDerrotas(int derrotas) { this.derrotas = derrotas; }
 
-    public int getVitorias() {
-        return vitorias;
-    }
+    public Faixa getFaixa() { return faixa; }
+    public void setFaixa(Faixa faixa) { this.faixa = faixa; }
 
-    public void setVitorias(int vitorias) {
-        this.vitorias = vitorias;
-    }
-
-    public int getDerrotas() {
-        return derrotas;
-    }
-
-    public void setDerrotas(int derrotas) {
-        this.derrotas = derrotas;
-    }
-
-    public Faixa getFaixa() {
-        return faixa;
-    }
-
-    public void setFaixa(Faixa faixa) {
-        this.faixa = faixa;
-    }
-
-    public List<Deck> getDecks() {
-        return decks;
-    }
-
-    public void setDecks(List<Deck> decks) {
-        this.decks = decks;
-    }
-
-    public void adicionarDeck(Deck deck) {
-        this.decks.add(deck);
-    }
-
-    public void removerDeck(Deck deck) {
-        this.decks.remove(deck);
-    }
-
-    public void incrementarVitorias() {
-        this.vitorias++;
-    }
-
-    public void incrementarDerrotas() {
-        this.derrotas++;
-    }
+    public List<Deck> getDecks() { return decks; }
+    public void setDecks(List<Deck> decks) { this.decks = decks; }
 
     @Override
     public String toString() {
-        return "Jogador{" +
-                "id=" + id +
-                ", nickname='" + nickname + '\'' +
-                ", vitorias=" + vitorias +
-                ", derrotas=" + derrotas +
-                ", faixa=" + faixa +
-                '}';
+        return nickname + " [" + vitorias + "V-" + derrotas + "D] " + faixa;
     }
 }

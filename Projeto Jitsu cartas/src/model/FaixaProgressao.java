@@ -3,7 +3,6 @@ package model;
 import gerais.enums.Faixa;
 
 public class FaixaProgressao {
-
     private Jogador jogador;
     private Faixa faixaAtual;
     private int pontosAtuais;
@@ -13,7 +12,7 @@ public class FaixaProgressao {
         this.jogador = jogador;
         this.faixaAtual = Faixa.BRANCA;
         this.pontosAtuais = 0;
-        this.pontosProximoNivel = 100; // Meta padrão inicial
+        this.pontosProximoNivel = 100;
     }
 
     public double calcularProgresso() {
@@ -31,7 +30,8 @@ public class FaixaProgressao {
             if (proxima != faixaAtual) {
                 this.pontosAtuais -= this.pontosProximoNivel;
                 this.faixaAtual = proxima;
-                this.pontosProximoNivel = (this.faixaAtual.ordinal() + 1) * 100; // Escalonamento de XP
+                this.jogador.setFaixa(proxima);
+                this.pontosProximoNivel = (this.faixaAtual.ordinal() + 1) * 100;
             }
         }
     }
@@ -45,5 +45,4 @@ public class FaixaProgressao {
     public void setPontosAtuais(int pontosAtuais) { this.pontosAtuais = pontosAtuais; }
     public int getPontosProximoNivel() { return pontosProximoNivel; }
     public void setPontosProximoNivel(int pontosProximoNivel) { this.pontosProximoNivel = pontosProximoNivel; }
-
 }

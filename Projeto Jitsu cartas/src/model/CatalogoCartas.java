@@ -13,52 +13,29 @@ public class CatalogoCartas {
         this.cartas = new ArrayList<>();
     }
 
-    public CatalogoCartas(int id, String nome, String descricao, List<Carta> cartas) {
+    public CatalogoCartas(int id, String nome, String descricao) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
-        this.cartas = cartas;
+        this.cartas = new ArrayList<>();
     }
 
-    public int getId() {
-        return id;
-    }
+    public void adicionarCarta(Carta carta) { this.cartas.add(carta); }
+    public List<Carta> listarCartas() { return new ArrayList<>(this.cartas); }
+    public int getTotalCartas() { return cartas.size(); }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public List<Carta> getCartas() {
-        return cartas;
-    }
-
-    public void setCartas(List<Carta> cartas) {
-        this.cartas = cartas;
-    }
+    // Getters e Setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+    public String getDescricao() { return descricao; }
+    public void setDescricao(String descricao) { this.descricao = descricao; }
+    public List<Carta> getCartas() { return cartas; }
+    public void setCartas(List<Carta> cartas) { this.cartas = cartas; }
 
     @Override
     public String toString() {
-        return "CatalogoCartas{" +
-                "id=" + id +
-                ", nome='" + nome + '\'' +
-                ", descricao='" + descricao + '\'' +
-                ", quantidadeCartas=" + cartas.size() +
-                '}';
+        return nome + " - " + getTotalCartas() + " cartas";
     }
 }
