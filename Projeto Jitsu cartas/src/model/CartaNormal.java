@@ -11,6 +11,5 @@ public class CartaNormal extends Carta {
 
     @Override
     public void aplicarEfeito(Partida partida) {
-        // Carta normal sem efeito adicional
     }
 }
