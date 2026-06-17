@@ -94,7 +94,6 @@ public class Partida implements Jogavel {
             return num1 > num2 ? jogador1 : (num2 > num1 ? jogador2 : null);
         }
 
-        // FOGO > NEVE > AGUA > FOGO
         if ((e1 == gerais.enums.Elemento.FOGO && e2 == gerais.enums.Elemento.NEVE) ||
             (e1 == gerais.enums.Elemento.NEVE && e2 == gerais.enums.Elemento.AGUA) ||
             (e1 == gerais.enums.Elemento.AGUA && e2 == gerais.enums.Elemento.FOGO)) {
@@ -140,7 +139,6 @@ public class Partida implements Jogavel {
         this.emAndamento = false;
     }
 
-    // Getters e Setters
     @Override
     public int getId() { return id; }
     public Jogador getJogador1() { return jogador1; }
