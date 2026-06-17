@@ -1,0 +1,8 @@
+package gerais.exceções;
+
+public class CartaInvalidaException extends Exception {
+
+    public CartaInvalidaException(String mensagem) {
+        super(mensagem);
+    }
+}
