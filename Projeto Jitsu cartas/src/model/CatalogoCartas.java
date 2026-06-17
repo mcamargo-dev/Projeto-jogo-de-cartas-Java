@@ -24,7 +24,7 @@ public class CatalogoCartas {
     public List<Carta> listarCartas() { return new ArrayList<>(this.cartas); }
     public int getTotalCartas() { return cartas.size(); }
 
-    // Getters e Setters
+    
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
     public String getNome() { return nome; }
